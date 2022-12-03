@@ -10,7 +10,7 @@ int n = ReadInt("Введите количество столбцов: ");
 double[,] numbers = new double[m,n];
 for (int i = 0; i < numbers.GetLength(0); i++)
 {
-    for (int j = 0; j < numbers.GetLength(0); j++)
+    for (int j = 0; j < numbers.GetLength(1); j++)
     {
         double temp = new Random().Next(-100,101);
         numbers[i,j] = temp/10;

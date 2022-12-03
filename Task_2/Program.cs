@@ -17,19 +17,16 @@ if (number.Length != 2)
     return;
 }
 
-string digit1 = Convert.ToString(number[0]);
-int temp1 = Convert.ToInt32(digit1);
+int temp1 = Revers(0);
+int temp2 = Revers(1);
 
-string digit2 = Convert.ToString(number[1]);
-int temp2 = Convert.ToInt32(digit2);
-
-int rows = 4; // Размер массива
+int rows = 6; // Размер массива
 int columns = 5;
 
 int[,] arrayNumbers = new int[rows, columns];
 for (int i = 0; i < arrayNumbers.GetLength(0); i++)
 {
-    for (int j = 0; j < arrayNumbers.GetLength(0); j++)
+    for (int j = 0; j < arrayNumbers.GetLength(1); j++)
     {
         arrayNumbers[i, j] = new Random().Next(0, 10);
     }
@@ -44,7 +41,7 @@ for (int i = 0; i < arrayNumbers.GetLength(0); i++)
 }
 Console.WriteLine();
 
-if (temp1 <= arrayNumbers.GetLength(0) || temp2 <= arrayNumbers.GetLength(1))
+if (temp1 <= arrayNumbers.GetLength(0) && temp2 <= arrayNumbers.GetLength(1))
 {
     Console.WriteLine(arrayNumbers[temp1 - 1, temp2 - 1]);
 }
@@ -53,3 +50,8 @@ else
     Console.Write("Такого числа в массиве нет");
 }
 
+int Revers (int i)
+{
+    string digit = Convert.ToString(number[i]);
+    return Convert.ToInt32(digit);
+}
