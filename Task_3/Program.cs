@@ -6,7 +6,6 @@
 8 4 2 4
 Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.*/
 
-
 int rows = ReadInt("Введите количество строк: "); 
 int columns = ReadInt("Введите количество столбцов: ");
 
@@ -18,7 +17,6 @@ for (int i = 0; i < arrayNumbers.GetLength(0); i++)
         arrayNumbers[i, j] = new Random().Next(0, 10);
     }
 }
-
 for (int i = 0; i < arrayNumbers.GetLength(0); i++)
 {
     for (int j = 0; j < arrayNumbers.GetLength(1); j++)
