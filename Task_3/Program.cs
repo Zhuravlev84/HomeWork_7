@@ -35,7 +35,7 @@ for (int i = 0; i < arrayNumbers.GetLength(1); i++)
         sum = sum + arrayNumbers[j, i];
 
     }
-    Console.Write($"{Math.Round(sum/3,2)}; ");
+    Console.Write($"{Math.Round(sum/rows,2)}; ");
     sum = 0;
 }
 Console.WriteLine();
